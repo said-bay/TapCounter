@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.example.tapcounter.app-merged_res-31:/layout_dialog_vibration_settings.xml.flat",
+        "source": "com.example.tapcounter.app-main-32:/layout/dialog_vibration_settings.xml"
+    },
+    {
+        "merged": "com.example.tapcounter.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "com.example.tapcounter.app-main-32:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.tapcounter.app-merged_res-31:/drawable_ic_settings.xml.flat",
+        "source": "com.example.tapcounter.app-main-32:/drawable/ic_settings.xml"
+    },
+    {
+        "merged": "com.example.tapcounter.app-merged_res-31:/drawable_ic_add.xml.flat",
+        "source": "com.example.tapcounter.app-main-32:/drawable/ic_add.xml"
+    },
+    {
+        "merged": "com.example.tapcounter.app-merged_res-31:/drawable_ic_refresh.xml.flat",
+        "source": "com.example.tapcounter.app-main-32:/drawable/ic_refresh.xml"
+    },
+    {
+        "merged": "com.example.tapcounter.app-merged_res-31:/drawable_ic_remove.xml.flat",
+        "source": "com.example.tapcounter.app-main-32:/drawable/ic_remove.xml"
+    },
+    {
+        "merged": "com.example.tapcounter.app-merged_res-31:/menu_main_menu.xml.flat",
+        "source": "com.example.tapcounter.app-main-32:/menu/main_menu.xml"
+    },
+    {
+        "merged": "com.example.tapcounter.app-merged_res-31:/layout_dialog_appearance_settings.xml.flat",
+        "source": "com.example.tapcounter.app-main-32:/layout/dialog_appearance_settings.xml"
+    },
+    {
+        "merged": "com.example.tapcounter.app-merged_res-31:/layout_dialog_counter_settings.xml.flat",
+        "source": "com.example.tapcounter.app-main-32:/layout/dialog_counter_settings.xml"
+    }
+]

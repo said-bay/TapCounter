@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="/Users/ahmet/Desktop/TapCounter/app"
+    name=":app"
+    type="APP"
+    maven="TapCounter:app:"
+    agpVersion="8.2.0"
+    buildFolder="build"
+    bootClassPath="/Users/ahmet/Library/Android/sdk/platforms/android-34/android.jar:/Users/ahmet/Library/Android/sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-34">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>
