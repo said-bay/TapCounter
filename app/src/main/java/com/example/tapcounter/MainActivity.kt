@@ -42,7 +42,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         prefs = getPreferences(Context.MODE_PRIVATE)
+        
+        // Vibrator servisini başlat ve kontrol et
         vibrator = getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator
+        if (vibrator?.hasVibrator() != true) {
+            // Titreşim özelliği yoksa veya çalışmıyorsa, ayarı kapat
+            getSharedPreferences("settings", Context.MODE_PRIVATE)
+                .edit()
+                .putBoolean("vibration_enabled", false)
+                .apply()
+        }
         
         setContentView(R.layout.activity_main)
         
@@ -70,35 +79,74 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun applySettings() {
+        val settingsPrefs = getSharedPreferences("settings", Context.MODE_PRIVATE)
+        
         // Yazı boyutunu ayarla
-        val fontSize = when (prefs.getString(PREF_FONT_SIZE, "medium")) {
-            "small" -> 24f
-            "medium" -> 36f
-            "large" -> 48f
+        val sizePosition = settingsPrefs.getInt("counter_size", 1)
+        val fontSize = when (sizePosition) {
+            0 -> 24f  // Küçük
+            1 -> 36f  // Normal
+            2 -> 48f  // Büyük
+            3 -> 60f  // Çok Büyük
             else -> 36f
         }
         counterText.textSize = fontSize
 
         // Yazı rengini ayarla
-        counterText.setTextColor(prefs.getInt(PREF_FONT_COLOR, Color.WHITE))
+        val colorPosition = settingsPrefs.getInt("counter_color", 0)
+        val color = when (colorPosition) {
+            0 -> Color.WHITE
+            1 -> Color.RED
+            2 -> Color.GREEN
+            3 -> Color.BLUE
+            4 -> Color.YELLOW
+            else -> Color.WHITE
+        }
+        counterText.setTextColor(color)
 
         // Konumu ayarla
+        val positionPosition = settingsPrefs.getInt("counter_position", 0)
         val params = counterText.layoutParams as ConstraintLayout.LayoutParams
-        when (prefs.getString(PREF_COUNTER_POSITION, "center")) {
-            "top" -> {
-                params.topToTop = ConstraintLayout.LayoutParams.PARENT_ID
-                params.bottomToBottom = ConstraintLayout.LayoutParams.UNSET
-                params.verticalBias = 0.1f
-            }
-            "center" -> {
+        when (positionPosition) {
+            0 -> { // Orta
                 params.topToTop = ConstraintLayout.LayoutParams.PARENT_ID
                 params.bottomToBottom = ConstraintLayout.LayoutParams.PARENT_ID
+                params.leftToLeft = ConstraintLayout.LayoutParams.PARENT_ID
+                params.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID
                 params.verticalBias = 0.5f
+                params.horizontalBias = 0.5f
             }
-            "bottom" -> {
-                params.topToTop = ConstraintLayout.LayoutParams.UNSET
+            1 -> { // Sol Üst
+                params.topToTop = ConstraintLayout.LayoutParams.PARENT_ID
+                params.leftToLeft = ConstraintLayout.LayoutParams.PARENT_ID
+                params.bottomToBottom = ConstraintLayout.LayoutParams.UNSET
+                params.rightToRight = ConstraintLayout.LayoutParams.UNSET
+                params.verticalBias = 0.1f
+                params.horizontalBias = 0.1f
+            }
+            2 -> { // Sağ Üst
+                params.topToTop = ConstraintLayout.LayoutParams.PARENT_ID
+                params.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID
+                params.bottomToBottom = ConstraintLayout.LayoutParams.UNSET
+                params.leftToLeft = ConstraintLayout.LayoutParams.UNSET
+                params.verticalBias = 0.1f
+                params.horizontalBias = 0.9f
+            }
+            3 -> { // Sol Alt
                 params.bottomToBottom = ConstraintLayout.LayoutParams.PARENT_ID
+                params.leftToLeft = ConstraintLayout.LayoutParams.PARENT_ID
+                params.topToTop = ConstraintLayout.LayoutParams.UNSET
+                params.rightToRight = ConstraintLayout.LayoutParams.UNSET
                 params.verticalBias = 0.9f
+                params.horizontalBias = 0.1f
+            }
+            4 -> { // Sağ Alt
+                params.bottomToBottom = ConstraintLayout.LayoutParams.PARENT_ID
+                params.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID
+                params.topToTop = ConstraintLayout.LayoutParams.UNSET
+                params.leftToLeft = ConstraintLayout.LayoutParams.UNSET
+                params.verticalBias = 0.9f
+                params.horizontalBias = 0.9f
             }
         }
         counterText.layoutParams = params
@@ -109,22 +157,35 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun performVibration() {
-        if (!prefs.getBoolean(PREF_VIBRATION_ENABLED, false)) return
+        val settingsPrefs = getSharedPreferences("settings", Context.MODE_PRIVATE)
+        if (!settingsPrefs.getBoolean("vibration_enabled", false)) return
         
-        val strength = when (prefs.getString(PREF_VIBRATION_STRENGTH, "medium")) {
-            "weak" -> 20
-            "medium" -> 40
-            "strong" -> 60
-            else -> 40
-        }.toLong()
+        // Vibrator servisini kontrol et
+        if (vibrator == null) {
+            vibrator = getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator
+        }
+        
+        // Titreşim özelliği var mı kontrol et
+        if (vibrator?.hasVibrator() != true) {
+            // Titreşim özelliği yoksa, ayarı kapat
+            settingsPrefs.edit().putBoolean("vibration_enabled", false).apply()
+            return
+        }
+        
+        val intensity = settingsPrefs.getInt("vibration_intensity", 50)
+        // 0-100 arasındaki intensity değerini 10-100ms arasına map ediyoruz
+        val duration = (intensity * 0.9 + 10).toLong()
 
-        vibrator?.let {
+        try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                it.vibrate(VibrationEffect.createOneShot(strength, VibrationEffect.DEFAULT_AMPLITUDE))
+                vibrator?.vibrate(VibrationEffect.createOneShot(duration, VibrationEffect.DEFAULT_AMPLITUDE))
             } else {
                 @Suppress("DEPRECATION")
-                it.vibrate(strength)
+                vibrator?.vibrate(duration)
             }
+        } catch (e: Exception) {
+            // Hata durumunda titreşimi kapat
+            settingsPrefs.edit().putBoolean("vibration_enabled", false).apply()
         }
     }
 
@@ -427,6 +488,7 @@ class MainActivity : AppCompatActivity() {
         val prefs = getSharedPreferences("counter", Context.MODE_PRIVATE)
         counter = prefs.getInt("current_value", 0)
         updateCounter()
+        applySettings()
     }
 
     // Aktivite duraklatıldığında sayaç değerini kaydet

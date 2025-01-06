@@ -10554,15 +10554,15 @@ com.example.tapcounter.MainActivity:
     private static final java.lang.String PREF_VIBRATION_STRENGTH
     private final void showAboutDialog()
     private final void showCounterSettingsDialog()
-    private static final void showCounterSettingsDialog$lambda$9(android.widget.RadioGroup,android.widget.RadioGroup,android.widget.RadioGroup,com.example.tapcounter.MainActivity,android.content.DialogInterface,int)
+    private static final void showCounterSettingsDialog$lambda$8(android.widget.RadioGroup,android.widget.RadioGroup,android.widget.RadioGroup,com.example.tapcounter.MainActivity,android.content.DialogInterface,int)
     private final void showSavedCountersDialog()
     private final void showSettingsDialog()
-    private static final void showSettingsDialog$lambda$4(android.content.SharedPreferences,android.widget.CompoundButton,boolean)
+    private static final void showSettingsDialog$lambda$3(android.content.SharedPreferences,android.widget.CompoundButton,boolean)
+    private static final void showSettingsDialog$lambda$4(android.app.Dialog,com.example.tapcounter.MainActivity,android.view.View)
     private static final void showSettingsDialog$lambda$5(android.app.Dialog,com.example.tapcounter.MainActivity,android.view.View)
     private static final void showSettingsDialog$lambda$6(android.app.Dialog,com.example.tapcounter.MainActivity,android.view.View)
-    private static final void showSettingsDialog$lambda$7(android.app.Dialog,com.example.tapcounter.MainActivity,android.view.View)
     private final void showVibrationSettingsDialog()
-    private static final void showVibrationSettingsDialog$lambda$10(com.example.tapcounter.MainActivity,androidx.appcompat.widget.SwitchCompat,android.widget.RadioGroup,android.content.DialogInterface,int)
+    private static final void showVibrationSettingsDialog$lambda$9(com.example.tapcounter.MainActivity,androidx.appcompat.widget.SwitchCompat,android.widget.RadioGroup,android.content.DialogInterface,int)
 com.example.tapcounter.R$drawable
 com.example.tapcounter.R$id:
     public static int colorBlue
@@ -28520,7 +28520,7 @@ androidx.core.os.LocaleListCompat:
     public final int size()
     public final java.lang.String toLanguageTags()
     public static androidx.core.os.LocaleListCompat wrap(android.os.LocaleList)
-androidx.core.os.LocaleListCompatWrapper$$InternalSyntheticThrowCCEIfNotNull$150$dd0d3399d7d164768be69e26cdc88e49809bc46afb623c060d951b7b929d77ad$0
+androidx.core.os.LocaleListCompatWrapper$$InternalSyntheticThrowCCEIfNotNull$146$dd0d3399d7d164768be69e26cdc88e49809bc46afb623c060d951b7b929d77ad$0
 androidx.core.os.LocaleListCompatWrapper
 androidx.core.os.LocaleListInterface:
     public abstract java.util.Locale get()
@@ -31151,7 +31151,7 @@ androidx.transition.ViewUtilsBase:
 androidx.transition.Visibility$DisappearListener:
     public final void hideViewWhenNotCanceled()
 androidx.transition.Visibility
-androidx.transition.WindowIdApi14$$InternalSyntheticThrowCCEIfNotNull$150$346ba31081d848221d10738ffacfe8b42a1cf2bcc44a47580e10fd7ecc1dfab1$0
+androidx.transition.WindowIdApi14$$InternalSyntheticThrowCCEIfNotNull$146$346ba31081d848221d10738ffacfe8b42a1cf2bcc44a47580e10fd7ecc1dfab1$0
 androidx.transition.WindowIdApi14
 androidx.vectordrawable.graphics.drawable.AndroidResources:
     public static final int[] STYLEABLE_ANIMATOR
@@ -31287,7 +31287,6 @@ com.example.tapcounter.MainActivity$Companion
 com.example.tapcounter.MainActivity:
     public static final androidx.transition.ViewUtilsBase Companion
     static void <clinit>()
-    public static void applySettings()
     public static void decrementCounter()
     public static void incrementCounter()
     public static void performVibration()
@@ -32210,7 +32209,6 @@ com.google.android.material.checkbox.MaterialCheckBox:
     public static void setUpDefaultButtonDrawableAnimationIfNeeded()
     public static void updateButtonTints()
     public static void updateIconTintIfNeeded()
-com.google.android.material.chip.Chip$$InternalSyntheticLambda$1$860a95f2ba16f11470ac682f45bacaa4f73f666c1689a0905cdb57dc12e2eff5$0
 com.google.android.material.chip.Chip$$InternalSyntheticThrowCCEIfNotNull$20$21dc2a30aa1a8c337670f7455e50b634ee41d346d363c6535e95752b1eac9814$0
 com.google.android.material.chip.Chip$$InternalSyntheticThrowCCEIfNotNull$20$771e1ce41bd975a24499ca8fc137c52bbdd3189676e134624a793565fe35b70a$0
 com.google.android.material.chip.Chip$ChipTouchHelper:
