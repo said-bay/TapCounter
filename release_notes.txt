@@ -1,0 +1,25 @@
+Sürüm 1.0.0 (6 Ocak 2025)
+
+🇹🇷 Türkçe:
+• İlk sürüm
+• Basit ve kullanışlı sayaç arayüzü
+• Sayaç değerini artırma ve azaltma
+• Titreşim geri bildirimi (ayarlanabilir)
+• Sayaç görünümünü özelleştirme:
+  - Yazı boyutu (küçük, orta, büyük)
+  - Yazı rengi (beyaz, gri, mavi)
+  - Konum (üst, orta, alt)
+• Sayaçları isimlendirerek kaydetme ve yönetme
+• Karanlık tema
+
+🇬🇧 English:
+• Initial release
+• Simple and practical counter interface
+• Increment and decrement counter value
+• Vibration feedback (customizable)
+• Customize counter appearance:
+  - Font size (small, medium, large)
+  - Font color (white, gray, blue)
+  - Position (top, center, bottom)
+• Save and manage counters with names
+• Dark theme
