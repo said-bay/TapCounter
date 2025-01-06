@@ -1,4 +1,0 @@
-#Mon Jan 06 10:46:05 TRT 2025
-base.0=/Users/ahmet/Desktop/TapCounter/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/0/classes.dex
-path.0=0/classes.dex
-renamed.0=classes.dex

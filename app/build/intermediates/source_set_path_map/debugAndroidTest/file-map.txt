@@ -1,4 +1,0 @@
-com.example.tapcounter.test.app-androidTest-0 /Users/ahmet/Desktop/TapCounter/app/build/generated/res/resValues/androidTest/debug
-com.example.tapcounter.test.app-mergeDebugAndroidTestResources-1 /Users/ahmet/Desktop/TapCounter/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
-com.example.tapcounter.test.app-mergeDebugAndroidTestResources-2 /Users/ahmet/Desktop/TapCounter/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
-com.example.tapcounter.test.app-merged_res-3 /Users/ahmet/Desktop/TapCounter/app/build/intermediates/merged_res/debugAndroidTest

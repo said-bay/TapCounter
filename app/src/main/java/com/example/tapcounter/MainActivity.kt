@@ -1,12 +1,16 @@
 package com.example.tapcounter
 
+import android.app.Dialog
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
+import android.text.InputType
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -17,6 +21,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.SwitchCompat
 import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var counterText: TextView
@@ -131,13 +136,11 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_add -> {
-                counter++
-                updateCounter()
+                incrementCounter()
                 true
             }
             R.id.action_remove -> {
-                counter--
-                updateCounter()
+                decrementCounter()
                 true
             }
             R.id.action_reset -> {
@@ -145,7 +148,11 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.action_settings -> {
-                showSettingsDialog()
+                startActivity(Intent(this, SettingsActivity::class.java))
+                true
+            }
+            R.id.action_save -> {
+                showSaveDialog()
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -193,25 +200,43 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showSettingsDialog() {
-        val items = arrayOf(
-            "Sayaç Ayarları",
-            "Titreşim Ayarları",
-            "Hakkında"
-        )
+        val dialog = Dialog(this)
+        dialog.setContentView(R.layout.dialog_settings)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
-        val dialog = AlertDialog.Builder(this)
-            .setTitle("Ayarlar")
-            .setItems(items) { _, which ->
-                when (which) {
-                    0 -> showCounterSettingsDialog()
-                    1 -> showVibrationSettingsDialog()
-                    2 -> showAboutDialog()
-                }
-            }
-            .setNegativeButton("Kapat", null)
-            .create()
+        val switchVibration = dialog.findViewById<Switch>(R.id.switchVibration)
+        val btnCounterSettings = dialog.findViewById<Button>(R.id.btnCounterSettings)
+        val btnSaved = dialog.findViewById<Button>(R.id.btnSaved)
+        val btnAbout = dialog.findViewById<Button>(R.id.btnAbout)
 
-        showDialog(dialog)
+        // Titreşim ayarını yükle
+        val prefs = getSharedPreferences("settings", Context.MODE_PRIVATE)
+        switchVibration.isChecked = prefs.getBoolean("vibration_enabled", true)
+
+        // Titreşim switch listener
+        switchVibration.setOnCheckedChangeListener { _, isChecked ->
+            prefs.edit().putBoolean("vibration_enabled", isChecked).apply()
+        }
+
+        // Sayaç ayarları butonu
+        btnCounterSettings.setOnClickListener {
+            dialog.dismiss()
+            showCounterSettingsDialog()
+        }
+
+        // Kaydedilenler butonu
+        btnSaved.setOnClickListener {
+            dialog.dismiss()
+            showSavedCountersDialog()
+        }
+
+        // Hakkında butonu
+        btnAbout.setOnClickListener {
+            dialog.dismiss()
+            showAboutDialog()
+        }
+
+        dialog.show()
     }
 
     private fun showResetConfirmationDialog() {
@@ -342,6 +367,68 @@ class MainActivity : AppCompatActivity() {
         showDialog(dialog)
     }
 
+    private fun showSaveDialog() {
+        val editText = EditText(this).apply {
+            hint = "Sayaç adını girin"
+            inputType = InputType.TYPE_CLASS_TEXT
+            setHintTextColor(resources.getColor(android.R.color.darker_gray, theme))
+            setTextColor(resources.getColor(android.R.color.white, theme))
+            background = null
+            setPadding(50, 30, 50, 30)
+        }
+
+        val container = FrameLayout(this).apply {
+            setBackgroundColor(resources.getColor(android.R.color.black, theme))
+            addView(editText)
+            setPadding(50, 30, 50, 30)
+        }
+
+        AlertDialog.Builder(this)
+            .setTitle("Sayacı Kaydet")
+            .setView(container)
+            .setPositiveButton("Kaydet") { _, _ ->
+                val name = editText.text.toString()
+                if (name.isNotEmpty()) {
+                    saveCounter()
+                }
+            }
+            .setNegativeButton("İptal", null)
+            .create()
+            .apply { 
+                setOnShowListener { updateDialogTheme(this) }
+                show()
+            }
+    }
+
+    private fun saveCounter() {
+        val prefs = getSharedPreferences("saved_counters", Context.MODE_PRIVATE)
+        val timestamp = System.currentTimeMillis()
+        val counterValue = "$counter|$timestamp"
+        prefs.edit().putString(UUID.randomUUID().toString(), counterValue).apply()
+        Toast.makeText(this, "Sayaç kaydedildi!", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun showSavedCountersDialog() {
+        val intent = Intent(this, SavedCountersActivity::class.java)
+        startActivity(intent)
+    }
+
+    // Aktivite duraklatıldığında sayaç değerini kaydet
+    override fun onPause() {
+        super.onPause()
+        // Sayaç değerini kaydet
+        val prefs = getSharedPreferences("counter", Context.MODE_PRIVATE)
+        prefs.edit().putInt("current_value", counter).apply()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Sayaç değerini yükle
+        val prefs = getSharedPreferences("counter", Context.MODE_PRIVATE)
+        counter = prefs.getInt("current_value", 0)
+        updateCounter()
+    }
+
     // Aktivite duraklatıldığında sayaç değerini kaydet
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -351,5 +438,15 @@ class MainActivity : AppCompatActivity() {
     private fun updateCounter() {
         counterText.text = counter.toString()
         prefs.edit().putInt(PREF_COUNTER, counter).apply()
+    }
+    
+    private fun incrementCounter() {
+        counter++
+        updateCounter()
+    }
+    
+    private fun decrementCounter() {
+        counter--
+        updateCounter()
     }
 }

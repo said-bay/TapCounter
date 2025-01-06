@@ -1365,15 +1365,12 @@ androidx.appcompat.app.ActionBar:
     public abstract void removeTabAt(int)
     boolean requestFocus()
     public abstract void selectTab(androidx.appcompat.app.ActionBar$Tab)
-    public abstract void setBackgroundDrawable(android.graphics.drawable.Drawable)
     public abstract void setCustomView(int)
     public abstract void setCustomView(android.view.View)
     public abstract void setCustomView(android.view.View,androidx.appcompat.app.ActionBar$LayoutParams)
-    public abstract void setDisplayHomeAsUpEnabled(boolean)
     public abstract void setDisplayOptions(int)
     public abstract void setDisplayOptions(int,int)
     public abstract void setDisplayShowCustomEnabled(boolean)
-    public abstract void setDisplayShowHomeEnabled(boolean)
     public abstract void setDisplayUseLogoEnabled(boolean)
     public void setElevation(float)
     public void setHideOffset(int)
@@ -1395,7 +1392,6 @@ androidx.appcompat.app.ActionBar:
     public abstract void setSubtitle(int)
     public abstract void setSubtitle(java.lang.CharSequence)
     public abstract void setTitle(int)
-    public abstract void setTitle(java.lang.CharSequence)
     public abstract void show()
 androidx.appcompat.app.ActionBarDrawerToggle$1
 androidx.appcompat.app.ActionBarDrawerToggle$Delegate
@@ -1421,6 +1417,7 @@ androidx.appcompat.app.AlertDialog$Builder:
     public androidx.appcompat.app.AlertDialog$Builder setIconAttribute(int)
     public androidx.appcompat.app.AlertDialog$Builder setInverseBackgroundForced(boolean)
     public androidx.appcompat.app.AlertDialog$Builder setItems(int,android.content.DialogInterface$OnClickListener)
+    public androidx.appcompat.app.AlertDialog$Builder setItems(java.lang.CharSequence[],android.content.DialogInterface$OnClickListener)
     public androidx.appcompat.app.AlertDialog$Builder setMessage(int)
     public androidx.appcompat.app.AlertDialog$Builder setMultiChoiceItems(int,boolean[],android.content.DialogInterface$OnMultiChoiceClickListener)
     public androidx.appcompat.app.AlertDialog$Builder setMultiChoiceItems(android.database.Cursor,java.lang.String,java.lang.String,android.content.DialogInterface$OnMultiChoiceClickListener)
@@ -1599,14 +1596,11 @@ androidx.appcompat.app.ToolbarActionBar:
     public void removeTabAt(int)
     public boolean requestFocus()
     public void selectTab(androidx.appcompat.app.ActionBar$Tab)
-    public void setBackgroundDrawable(android.graphics.drawable.Drawable)
     public void setCustomView(int)
     public void setCustomView(android.view.View)
     public void setCustomView(android.view.View,androidx.appcompat.app.ActionBar$LayoutParams)
-    public void setDisplayHomeAsUpEnabled(boolean)
     public void setDisplayOptions(int)
     public void setDisplayShowCustomEnabled(boolean)
-    public void setDisplayShowHomeEnabled(boolean)
     public void setDisplayUseLogoEnabled(boolean)
     public void setElevation(float)
     public void setHomeActionContentDescription(int)
@@ -1626,7 +1620,6 @@ androidx.appcompat.app.ToolbarActionBar:
     public void setSubtitle(int)
     public void setSubtitle(java.lang.CharSequence)
     public void setTitle(int)
-    public void setTitle(java.lang.CharSequence)
     public void show()
 androidx.appcompat.app.TwilightCalculator:
     private static final float ALTIDUTE_CORRECTION_CIVIL_TWILIGHT
@@ -1688,13 +1681,11 @@ androidx.appcompat.app.WindowDecorActionBar:
     public void removeTabAt(int)
     public boolean requestFocus()
     public void selectTab(androidx.appcompat.app.ActionBar$Tab)
-    public void setBackgroundDrawable(android.graphics.drawable.Drawable)
     public void setCustomView(int)
     public void setCustomView(android.view.View)
     public void setCustomView(android.view.View,androidx.appcompat.app.ActionBar$LayoutParams)
     public void setDisplayOptions(int)
     public void setDisplayShowCustomEnabled(boolean)
-    public void setDisplayShowHomeEnabled(boolean)
     public void setDisplayUseLogoEnabled(boolean)
     public void setHideOffset(int)
     public void setHomeActionContentDescription(int)
@@ -1713,7 +1704,6 @@ androidx.appcompat.app.WindowDecorActionBar:
     public void setSubtitle(int)
     public void setSubtitle(java.lang.CharSequence)
     public void setTitle(int)
-    public void setTitle(java.lang.CharSequence)
     public void show()
 androidx.appcompat.content.res.AppCompatResources:
     private void <init>()
@@ -2142,7 +2132,6 @@ androidx.appcompat.widget.DecorToolbar:
     public abstract boolean isTitleTruncated()
     public abstract void restoreHierarchyState(android.util.SparseArray)
     public abstract void saveHierarchyState(android.util.SparseArray)
-    public abstract void setBackgroundDrawable(android.graphics.drawable.Drawable)
     public abstract void setCustomView(android.view.View)
     public abstract void setDefaultNavigationContentDescription(int)
     public abstract void setDefaultNavigationIcon(android.graphics.drawable.Drawable)
@@ -2155,7 +2144,6 @@ androidx.appcompat.widget.DecorToolbar:
     public abstract void setNavigationIcon(android.graphics.drawable.Drawable)
     public abstract void setNavigationMode(int)
     public abstract void setSubtitle(java.lang.CharSequence)
-    public abstract void setTitle(java.lang.CharSequence)
 androidx.appcompat.widget.DialogTitle:
     public void <init>(android.content.Context)
     public void <init>(android.content.Context,android.util.AttributeSet,int)
@@ -2414,7 +2402,6 @@ androidx.appcompat.widget.ToolbarWidgetWrapper:
     public boolean isTitleTruncated()
     public void restoreHierarchyState(android.util.SparseArray)
     public void saveHierarchyState(android.util.SparseArray)
-    public void setBackgroundDrawable(android.graphics.drawable.Drawable)
     public void setDefaultNavigationIcon(android.graphics.drawable.Drawable)
     public void setDropdownParams(android.widget.SpinnerAdapter,android.widget.AdapterView$OnItemSelectedListener)
     public void setDropdownSelectedPosition(int)
@@ -9388,7 +9375,6 @@ androidx.recyclerview.widget.AdapterHelper:
     boolean onItemRangeChanged(int,int,java.lang.Object)
     boolean onItemRangeInserted(int,int)
     boolean onItemRangeMoved(int,int,int)
-    boolean onItemRangeRemoved(int,int)
 androidx.recyclerview.widget.AdapterListUpdateCallback
 androidx.recyclerview.widget.AsyncDifferConfig$Builder
 androidx.recyclerview.widget.AsyncDifferConfig
@@ -9498,7 +9484,6 @@ androidx.recyclerview.widget.LinearLayoutManager:
     private static final float MAX_SCROLL_FACTOR
     private static final java.lang.String TAG
     public static final int VERTICAL
-    public void <init>(android.content.Context)
     public int findFirstCompletelyVisibleItemPosition()
     public int findLastCompletelyVisibleItemPosition()
     public int getInitialPrefetchItemCount()
@@ -9552,19 +9537,16 @@ androidx.recyclerview.widget.RecyclerView$Adapter:
     public final void notifyItemRangeChanged(int,int,java.lang.Object)
     public final void notifyItemRangeInserted(int,int)
     public final void notifyItemRangeRemoved(int,int)
-    public final void notifyItemRemoved(int)
 androidx.recyclerview.widget.RecyclerView$AdapterDataObservable:
     public void notifyItemMoved(int,int)
     public void notifyItemRangeChanged(int,int)
     public void notifyItemRangeChanged(int,int,java.lang.Object)
     public void notifyItemRangeInserted(int,int)
-    public void notifyItemRangeRemoved(int,int)
 androidx.recyclerview.widget.RecyclerView$AdapterDataObserver:
     public void onItemRangeChanged(int,int)
     public void onItemRangeChanged(int,int,java.lang.Object)
     public void onItemRangeInserted(int,int)
     public void onItemRangeMoved(int,int,int)
-    public void onItemRangeRemoved(int,int)
 androidx.recyclerview.widget.RecyclerView$EdgeEffectFactory$EdgeDirection
 androidx.recyclerview.widget.RecyclerView$EdgeEffectFactory:
     public static final int DIRECTION_BOTTOM
@@ -9626,8 +9608,6 @@ androidx.recyclerview.widget.RecyclerView$RecyclerViewDataObserver:
     public void onItemRangeChanged(int,int,java.lang.Object)
     public void onItemRangeInserted(int,int)
     public void onItemRangeMoved(int,int,int)
-    public void onItemRangeRemoved(int,int)
-    void triggerUpdateProcessor()
 androidx.recyclerview.widget.RecyclerView$SimpleOnItemTouchListener
 androidx.recyclerview.widget.RecyclerView$SmoothScroller$Action:
     public static final int UNDEFINED_DURATION
@@ -10572,21 +10552,63 @@ com.example.tapcounter.MainActivity:
     private static final java.lang.String PREF_FONT_SIZE
     private static final java.lang.String PREF_VIBRATION_ENABLED
     private static final java.lang.String PREF_VIBRATION_STRENGTH
+    private final void showAboutDialog()
+    private final void showCounterSettingsDialog()
+    private static final void showCounterSettingsDialog$lambda$9(android.widget.RadioGroup,android.widget.RadioGroup,android.widget.RadioGroup,com.example.tapcounter.MainActivity,android.content.DialogInterface,int)
+    private final void showSavedCountersDialog()
+    private final void showSettingsDialog()
+    private static final void showSettingsDialog$lambda$4(android.content.SharedPreferences,android.widget.CompoundButton,boolean)
+    private static final void showSettingsDialog$lambda$5(android.app.Dialog,com.example.tapcounter.MainActivity,android.view.View)
+    private static final void showSettingsDialog$lambda$6(android.app.Dialog,com.example.tapcounter.MainActivity,android.view.View)
+    private static final void showSettingsDialog$lambda$7(android.app.Dialog,com.example.tapcounter.MainActivity,android.view.View)
+    private final void showVibrationSettingsDialog()
+    private static final void showVibrationSettingsDialog$lambda$10(com.example.tapcounter.MainActivity,androidx.appcompat.widget.SwitchCompat,android.widget.RadioGroup,android.content.DialogInterface,int)
 com.example.tapcounter.R$drawable
 com.example.tapcounter.R$id:
+    public static int colorBlue
+    public static int colorGray
+    public static int colorGroup
+    public static int colorWhite
     public static int darkModeSwitch
+    public static int enableVibration
+    public static int fontSizeGroup
+    public static int positionBottom
+    public static int positionCenter
+    public static int positionGroup
+    public static int positionTop
+    public static int sizeLarge
+    public static int sizeMedium
+    public static int sizeSmall
+    public static int strengthGroup
+    public static int strengthLight
+    public static int strengthMedium
+    public static int strengthStrong
     public static int themeDark
     public static int themeGroup
     public static int themeLight
     private void <init>()
 com.example.tapcounter.R$layout:
     public static int dialog_appearance_settings
+    public static int dialog_counter_settings
+    public static int dialog_settings
+    public static int dialog_vibration_settings
     private void <init>()
 com.example.tapcounter.R$menu:
     private void <init>()
+com.example.tapcounter.R$mipmap
 com.example.tapcounter.R$string
 com.example.tapcounter.R$style
 com.example.tapcounter.R
+com.example.tapcounter.SavedCounter:
+    public final java.lang.String component1()
+    public final int component2()
+    public final long component3()
+    public final com.example.tapcounter.SavedCounter copy(java.lang.String,int,long)
+    public static synthetic com.example.tapcounter.SavedCounter copy$default(com.example.tapcounter.SavedCounter,java.lang.String,int,long,int,java.lang.Object)
+com.example.tapcounter.SettingsActivity:
+    private final void showAboutDialog()
+    private final void showCounterSettingsDialog()
+    private static final void showCounterSettingsDialog$lambda$16(com.example.tapcounter.SettingsActivity,android.widget.Spinner,android.widget.Spinner,android.widget.Spinner,android.content.DialogInterface,int)
 com.google.android.material.R$anim
 com.google.android.material.R$animator:
     public static int design_appbar_state_list_animator
@@ -21591,7 +21613,6 @@ kotlin.collections.CollectionsKt__MutableCollectionsJVMKt:
     public static final void sort(java.util.List)
     private static final void sort(java.util.List,java.util.Comparator)
     private static final void sort(java.util.List,kotlin.jvm.functions.Function2)
-    public static final void sortWith(java.util.List,java.util.Comparator)
 kotlin.collections.CollectionsKt__MutableCollectionsKt:
     public void <init>()
     public static final boolean addAll(java.util.Collection,java.lang.Iterable)
@@ -21853,9 +21874,7 @@ kotlin.collections.CollectionsKt___CollectionsKt:
     public static final java.util.List scan(java.lang.Iterable,java.lang.Object,kotlin.jvm.functions.Function2)
     public static final java.util.List scanIndexed(java.lang.Iterable,java.lang.Object,kotlin.jvm.functions.Function3)
     public static final void shuffle(java.util.List,kotlin.random.Random)
-    public static final java.lang.Object single(java.lang.Iterable)
     public static final java.lang.Object single(java.lang.Iterable,kotlin.jvm.functions.Function1)
-    public static final java.lang.Object single(java.util.List)
     public static final java.lang.Object singleOrNull(java.lang.Iterable)
     public static final java.lang.Object singleOrNull(java.lang.Iterable,kotlin.jvm.functions.Function1)
     public static final java.lang.Object singleOrNull(java.util.List)
@@ -22146,7 +22165,8 @@ kotlin.collections.unsigned.UArraysKt___UArraysKt$withIndex$2
 kotlin.collections.unsigned.UArraysKt___UArraysKt$withIndex$3
 kotlin.collections.unsigned.UArraysKt___UArraysKt$withIndex$4
 kotlin.collections.unsigned.UArraysKt___UArraysKt
-kotlin.comparisons.ComparisonsKt
+kotlin.comparisons.ComparisonsKt:
+    private void <init>()
 kotlin.comparisons.ComparisonsKt__ComparisonsKt$compareBy$2
 kotlin.comparisons.ComparisonsKt__ComparisonsKt$compareBy$3
 kotlin.comparisons.ComparisonsKt__ComparisonsKt$compareByDescending$1
@@ -22156,9 +22176,88 @@ kotlin.comparisons.ComparisonsKt__ComparisonsKt$thenBy$2
 kotlin.comparisons.ComparisonsKt__ComparisonsKt$thenByDescending$1
 kotlin.comparisons.ComparisonsKt__ComparisonsKt$thenByDescending$2
 kotlin.comparisons.ComparisonsKt__ComparisonsKt$thenComparator$1
-kotlin.comparisons.ComparisonsKt__ComparisonsKt
-kotlin.comparisons.ComparisonsKt___ComparisonsJvmKt
-kotlin.comparisons.ComparisonsKt___ComparisonsKt
+kotlin.comparisons.ComparisonsKt__ComparisonsKt:
+    public void <init>()
+    private static final java.util.Comparator compareBy(java.util.Comparator,kotlin.jvm.functions.Function1)
+    private static final java.util.Comparator compareBy(kotlin.jvm.functions.Function1)
+    public static final varargs java.util.Comparator compareBy(kotlin.jvm.functions.Function1[])
+    private static final int compareBy$lambda$0$ComparisonsKt__ComparisonsKt(kotlin.jvm.functions.Function1[],java.lang.Object,java.lang.Object)
+    private static final java.util.Comparator compareByDescending(java.util.Comparator,kotlin.jvm.functions.Function1)
+    private static final java.util.Comparator compareByDescending(kotlin.jvm.functions.Function1)
+    private static final int compareValuesBy(java.lang.Object,java.lang.Object,java.util.Comparator,kotlin.jvm.functions.Function1)
+    private static final int compareValuesBy(java.lang.Object,java.lang.Object,kotlin.jvm.functions.Function1)
+    public static final varargs int compareValuesBy(java.lang.Object,java.lang.Object,kotlin.jvm.functions.Function1[])
+    private static final int compareValuesByImpl$ComparisonsKt__ComparisonsKt(java.lang.Object,java.lang.Object,kotlin.jvm.functions.Function1[])
+    public static final java.util.Comparator naturalOrder()
+    private static final java.util.Comparator nullsFirst()
+    public static final java.util.Comparator nullsFirst(java.util.Comparator)
+    private static final int nullsFirst$lambda$3$ComparisonsKt__ComparisonsKt(java.util.Comparator,java.lang.Object,java.lang.Object)
+    private static final java.util.Comparator nullsLast()
+    public static final java.util.Comparator nullsLast(java.util.Comparator)
+    private static final int nullsLast$lambda$4$ComparisonsKt__ComparisonsKt(java.util.Comparator,java.lang.Object,java.lang.Object)
+    public static final java.util.Comparator reverseOrder()
+    public static final java.util.Comparator reversed(java.util.Comparator)
+    public static final java.util.Comparator then(java.util.Comparator,java.util.Comparator)
+    private static final int then$lambda$1$ComparisonsKt__ComparisonsKt(java.util.Comparator,java.util.Comparator,java.lang.Object,java.lang.Object)
+    private static final java.util.Comparator thenBy(java.util.Comparator,java.util.Comparator,kotlin.jvm.functions.Function1)
+    private static final java.util.Comparator thenBy(java.util.Comparator,kotlin.jvm.functions.Function1)
+    private static final java.util.Comparator thenByDescending(java.util.Comparator,java.util.Comparator,kotlin.jvm.functions.Function1)
+    private static final java.util.Comparator thenByDescending(java.util.Comparator,kotlin.jvm.functions.Function1)
+    private static final java.util.Comparator thenComparator(java.util.Comparator,kotlin.jvm.functions.Function2)
+    public static final java.util.Comparator thenDescending(java.util.Comparator,java.util.Comparator)
+    private static final int thenDescending$lambda$2$ComparisonsKt__ComparisonsKt(java.util.Comparator,java.util.Comparator,java.lang.Object,java.lang.Object)
+kotlin.comparisons.ComparisonsKt___ComparisonsJvmKt:
+    public void <init>()
+    private static final byte maxOf(byte,byte)
+    private static final byte maxOf(byte,byte,byte)
+    public static final varargs byte maxOf(byte,byte[])
+    private static final double maxOf(double,double)
+    private static final double maxOf(double,double,double)
+    public static final varargs double maxOf(double,double[])
+    private static final float maxOf(float,float)
+    private static final float maxOf(float,float,float)
+    public static final varargs float maxOf(float,float[])
+    private static final int maxOf(int,int)
+    private static final int maxOf(int,int,int)
+    public static final varargs int maxOf(int,int[])
+    private static final long maxOf(long,long)
+    private static final long maxOf(long,long,long)
+    public static final varargs long maxOf(long,long[])
+    public static final java.lang.Comparable maxOf(java.lang.Comparable,java.lang.Comparable)
+    public static final java.lang.Comparable maxOf(java.lang.Comparable,java.lang.Comparable,java.lang.Comparable)
+    public static final varargs java.lang.Comparable maxOf(java.lang.Comparable,java.lang.Comparable[])
+    private static final short maxOf(short,short)
+    private static final short maxOf(short,short,short)
+    public static final varargs short maxOf(short,short[])
+    private static final byte minOf(byte,byte)
+    private static final byte minOf(byte,byte,byte)
+    public static final varargs byte minOf(byte,byte[])
+    private static final double minOf(double,double)
+    private static final double minOf(double,double,double)
+    public static final varargs double minOf(double,double[])
+    private static final float minOf(float,float)
+    private static final float minOf(float,float,float)
+    public static final varargs float minOf(float,float[])
+    private static final int minOf(int,int)
+    private static final int minOf(int,int,int)
+    public static final varargs int minOf(int,int[])
+    private static final long minOf(long,long)
+    private static final long minOf(long,long,long)
+    public static final varargs long minOf(long,long[])
+    public static final java.lang.Comparable minOf(java.lang.Comparable,java.lang.Comparable)
+    public static final java.lang.Comparable minOf(java.lang.Comparable,java.lang.Comparable,java.lang.Comparable)
+    public static final varargs java.lang.Comparable minOf(java.lang.Comparable,java.lang.Comparable[])
+    private static final short minOf(short,short)
+    private static final short minOf(short,short,short)
+    public static final varargs short minOf(short,short[])
+kotlin.comparisons.ComparisonsKt___ComparisonsKt:
+    public void <init>()
+    public static final java.lang.Object maxOf(java.lang.Object,java.lang.Object,java.lang.Object,java.util.Comparator)
+    public static final java.lang.Object maxOf(java.lang.Object,java.lang.Object,java.util.Comparator)
+    public static final java.lang.Object maxOf(java.lang.Object,java.lang.Object[],java.util.Comparator)
+    public static final java.lang.Object minOf(java.lang.Object,java.lang.Object,java.lang.Object,java.util.Comparator)
+    public static final java.lang.Object minOf(java.lang.Object,java.lang.Object,java.util.Comparator)
+    public static final java.lang.Object minOf(java.lang.Object,java.lang.Object[],java.util.Comparator)
 kotlin.comparisons.NaturalOrderComparator
 kotlin.comparisons.ReverseOrderComparator
 kotlin.comparisons.ReversedComparator
@@ -22424,8 +22523,6 @@ kotlin.jvm.functions.Function21:
     public abstract java.lang.Object invoke(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
 kotlin.jvm.functions.Function22:
     public abstract java.lang.Object invoke(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
-kotlin.jvm.functions.Function2:
-    public abstract java.lang.Object invoke(java.lang.Object,java.lang.Object)
 kotlin.jvm.functions.Function3:
     public abstract java.lang.Object invoke(java.lang.Object,java.lang.Object,java.lang.Object)
 kotlin.jvm.functions.Function4:
@@ -22780,19 +22877,14 @@ kotlin.ranges.ComparableOpenEndRange
 kotlin.ranges.ComparableRange
 kotlin.ranges.IntProgressionIterator:
     public final int getStep()
-kotlin.ranges.IntRange$Companion:
-    public final kotlin.ranges.IntRange getEMPTY()
 kotlin.ranges.IntRange:
-    public static final synthetic kotlin.ranges.IntRange access$getEMPTY$cp()
     public boolean contains(int)
     public synthetic bridge boolean contains(java.lang.Comparable)
     public synthetic bridge java.lang.Comparable getEndExclusive()
     public java.lang.Integer getEndExclusive()
     public static synthetic void getEndExclusive$annotations()
     public synthetic bridge java.lang.Comparable getEndInclusive()
-    public java.lang.Integer getEndInclusive()
     public synthetic bridge java.lang.Comparable getStart()
-    public java.lang.Integer getStart()
 kotlin.ranges.LongProgression$Companion
 kotlin.ranges.LongProgression
 kotlin.ranges.LongProgressionIterator
@@ -22840,7 +22932,6 @@ kotlin.ranges.RangesKt___RangesKt:
     public static final byte coerceIn(byte,byte,byte)
     public static final double coerceIn(double,double,double)
     public static final float coerceIn(float,float,float)
-    public static final int coerceIn(int,int,int)
     public static final int coerceIn(int,kotlin.ranges.ClosedRange)
     public static final long coerceIn(long,long,long)
     public static final long coerceIn(long,kotlin.ranges.ClosedRange)
@@ -22957,7 +23048,6 @@ kotlin.ranges.RangesKt___RangesKt:
     public static final kotlin.ranges.IntRange until(byte,int)
     public static final kotlin.ranges.IntRange until(byte,short)
     public static final kotlin.ranges.IntRange until(int,byte)
-    public static final kotlin.ranges.IntRange until(int,int)
     public static final kotlin.ranges.IntRange until(int,short)
     public static final kotlin.ranges.IntRange until(short,byte)
     public static final kotlin.ranges.IntRange until(short,int)
@@ -23090,13 +23180,24 @@ kotlin.sequences.IndexingSequence$iterator$1
 kotlin.sequences.IndexingSequence
 kotlin.sequences.MergingSequence$iterator$1
 kotlin.sequences.MergingSequence
-kotlin.sequences.Sequence
 kotlin.sequences.SequenceBuilderIterator
 kotlin.sequences.SequenceScope
-kotlin.sequences.SequencesKt
+kotlin.sequences.SequencesKt:
+    private void <init>()
 kotlin.sequences.SequencesKt__SequenceBuilderKt$sequence$$inlined$Sequence$1
-kotlin.sequences.SequencesKt__SequenceBuilderKt
-kotlin.sequences.SequencesKt__SequencesJVMKt
+kotlin.sequences.SequencesKt__SequenceBuilderKt:
+    private static final int State_Done
+    private static final int State_Failed
+    private static final int State_ManyNotReady
+    private static final int State_ManyReady
+    private static final int State_NotReady
+    private static final int State_Ready
+    public void <init>()
+    public static final java.util.Iterator iterator(kotlin.jvm.functions.Function2)
+    public static final kotlin.sequences.Sequence sequence(kotlin.jvm.functions.Function2)
+kotlin.sequences.SequencesKt__SequencesJVMKt:
+    public void <init>()
+    private static final kotlin.sequences.Sequence asSequence(java.util.Enumeration)
 kotlin.sequences.SequencesKt__SequencesKt$Sequence$1
 kotlin.sequences.SequencesKt__SequencesKt$asSequence$$inlined$Sequence$1
 kotlin.sequences.SequencesKt__SequencesKt$flatMapIndexed$1
@@ -23107,10 +23208,44 @@ kotlin.sequences.SequencesKt__SequencesKt$generateSequence$1
 kotlin.sequences.SequencesKt__SequencesKt$generateSequence$2
 kotlin.sequences.SequencesKt__SequencesKt$ifEmpty$1
 kotlin.sequences.SequencesKt__SequencesKt$shuffled$1
-kotlin.sequences.SequencesKt__SequencesKt
+kotlin.sequences.SequencesKt__SequencesKt:
+    public void <init>()
+    private static final kotlin.sequences.Sequence Sequence(kotlin.jvm.functions.Function0)
+    public static final kotlin.sequences.Sequence asSequence(java.util.Iterator)
+    public static final kotlin.sequences.Sequence constrainOnce(kotlin.sequences.Sequence)
+    public static final kotlin.sequences.Sequence emptySequence()
+    public static final kotlin.sequences.Sequence flatMapIndexed(kotlin.sequences.Sequence,kotlin.jvm.functions.Function2,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence flatten(kotlin.sequences.Sequence)
+    private static final kotlin.sequences.Sequence flatten$SequencesKt__SequencesKt(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence flattenSequenceOfIterable(kotlin.sequences.Sequence)
+    public static final kotlin.sequences.Sequence generateSequence(java.lang.Object,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence generateSequence(kotlin.jvm.functions.Function0)
+    public static final kotlin.sequences.Sequence generateSequence(kotlin.jvm.functions.Function0,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence ifEmpty(kotlin.sequences.Sequence,kotlin.jvm.functions.Function0)
+    private static final kotlin.sequences.Sequence orEmpty(kotlin.sequences.Sequence)
+    public static final varargs kotlin.sequences.Sequence sequenceOf(java.lang.Object[])
+    public static final kotlin.sequences.Sequence shuffled(kotlin.sequences.Sequence)
+    public static final kotlin.sequences.Sequence shuffled(kotlin.sequences.Sequence,kotlin.random.Random)
+    public static final kotlin.Pair unzip(kotlin.sequences.Sequence)
 kotlin.sequences.SequencesKt___SequencesJvmKt$filterIsInstance$1
-kotlin.sequences.SequencesKt___SequencesJvmKt
-kotlin.sequences.SequencesKt___SequencesKt$asIterable$$inlined$Iterable$1
+kotlin.sequences.SequencesKt___SequencesJvmKt:
+    public void <init>()
+    public static final kotlin.sequences.Sequence filterIsInstance(kotlin.sequences.Sequence,java.lang.Class)
+    public static final java.util.Collection filterIsInstanceTo(kotlin.sequences.Sequence,java.util.Collection,java.lang.Class)
+    public static final synthetic java.lang.Comparable max(kotlin.sequences.Sequence)
+    public static final synthetic java.lang.Double max(kotlin.sequences.Sequence)
+    public static final synthetic java.lang.Float max(kotlin.sequences.Sequence)
+    public static final synthetic java.lang.Object maxBy(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final synthetic java.lang.Object maxWith(kotlin.sequences.Sequence,java.util.Comparator)
+    public static final synthetic java.lang.Comparable min(kotlin.sequences.Sequence)
+    public static final synthetic java.lang.Double min(kotlin.sequences.Sequence)
+    public static final synthetic java.lang.Float min(kotlin.sequences.Sequence)
+    public static final synthetic java.lang.Object minBy(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final synthetic java.lang.Object minWith(kotlin.sequences.Sequence,java.util.Comparator)
+    private static final java.math.BigDecimal sumOfBigDecimal(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final java.math.BigInteger sumOfBigInteger(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final java.util.SortedSet toSortedSet(kotlin.sequences.Sequence)
+    public static final java.util.SortedSet toSortedSet(kotlin.sequences.Sequence,java.util.Comparator)
 kotlin.sequences.SequencesKt___SequencesKt$distinct$1
 kotlin.sequences.SequencesKt___SequencesKt$elementAt$1
 kotlin.sequences.SequencesKt___SequencesKt$filterIndexed$1
@@ -23142,7 +23277,194 @@ kotlin.sequences.SequencesKt___SequencesKt$sortedWith$1
 kotlin.sequences.SequencesKt___SequencesKt$zip$1
 kotlin.sequences.SequencesKt___SequencesKt$zipWithNext$1
 kotlin.sequences.SequencesKt___SequencesKt$zipWithNext$2
-kotlin.sequences.SequencesKt___SequencesKt
+kotlin.sequences.SequencesKt___SequencesKt:
+    public void <init>()
+    public static final boolean all(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final boolean any(kotlin.sequences.Sequence)
+    public static final boolean any(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final kotlin.sequences.Sequence asSequence(kotlin.sequences.Sequence)
+    public static final java.util.Map associate(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final java.util.Map associateBy(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final java.util.Map associateBy(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1,kotlin.jvm.functions.Function1)
+    public static final java.util.Map associateByTo(kotlin.sequences.Sequence,java.util.Map,kotlin.jvm.functions.Function1)
+    public static final java.util.Map associateByTo(kotlin.sequences.Sequence,java.util.Map,kotlin.jvm.functions.Function1,kotlin.jvm.functions.Function1)
+    public static final java.util.Map associateTo(kotlin.sequences.Sequence,java.util.Map,kotlin.jvm.functions.Function1)
+    public static final java.util.Map associateWith(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final java.util.Map associateWithTo(kotlin.sequences.Sequence,java.util.Map,kotlin.jvm.functions.Function1)
+    public static final double averageOfByte(kotlin.sequences.Sequence)
+    public static final double averageOfDouble(kotlin.sequences.Sequence)
+    public static final double averageOfFloat(kotlin.sequences.Sequence)
+    public static final double averageOfInt(kotlin.sequences.Sequence)
+    public static final double averageOfLong(kotlin.sequences.Sequence)
+    public static final double averageOfShort(kotlin.sequences.Sequence)
+    public static final kotlin.sequences.Sequence chunked(kotlin.sequences.Sequence,int)
+    public static final kotlin.sequences.Sequence chunked(kotlin.sequences.Sequence,int,kotlin.jvm.functions.Function1)
+    public static final boolean contains(kotlin.sequences.Sequence,java.lang.Object)
+    public static final int count(kotlin.sequences.Sequence)
+    public static final int count(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence distinct(kotlin.sequences.Sequence)
+    public static final kotlin.sequences.Sequence distinctBy(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence drop(kotlin.sequences.Sequence,int)
+    public static final kotlin.sequences.Sequence dropWhile(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final java.lang.Object elementAt(kotlin.sequences.Sequence,int)
+    public static final java.lang.Object elementAtOrElse(kotlin.sequences.Sequence,int,kotlin.jvm.functions.Function1)
+    public static final java.lang.Object elementAtOrNull(kotlin.sequences.Sequence,int)
+    public static final kotlin.sequences.Sequence filter(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence filterIndexed(kotlin.sequences.Sequence,kotlin.jvm.functions.Function2)
+    public static final java.util.Collection filterIndexedTo(kotlin.sequences.Sequence,java.util.Collection,kotlin.jvm.functions.Function2)
+    public static final synthetic kotlin.sequences.Sequence filterIsInstance(kotlin.sequences.Sequence)
+    public static final synthetic java.util.Collection filterIsInstanceTo(kotlin.sequences.Sequence,java.util.Collection)
+    public static final kotlin.sequences.Sequence filterNot(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence filterNotNull(kotlin.sequences.Sequence)
+    public static final java.util.Collection filterNotNullTo(kotlin.sequences.Sequence,java.util.Collection)
+    public static final java.util.Collection filterNotTo(kotlin.sequences.Sequence,java.util.Collection,kotlin.jvm.functions.Function1)
+    public static final java.util.Collection filterTo(kotlin.sequences.Sequence,java.util.Collection,kotlin.jvm.functions.Function1)
+    private static final java.lang.Object find(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final java.lang.Object findLast(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final java.lang.Object first(kotlin.sequences.Sequence)
+    public static final java.lang.Object first(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final java.lang.Object firstNotNullOf(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final java.lang.Object firstNotNullOfOrNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final java.lang.Object firstOrNull(kotlin.sequences.Sequence)
+    public static final java.lang.Object firstOrNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence flatMap(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence flatMapIndexedIterable(kotlin.sequences.Sequence,kotlin.jvm.functions.Function2)
+    private static final java.util.Collection flatMapIndexedIterableTo(kotlin.sequences.Sequence,java.util.Collection,kotlin.jvm.functions.Function2)
+    public static final kotlin.sequences.Sequence flatMapIndexedSequence(kotlin.sequences.Sequence,kotlin.jvm.functions.Function2)
+    private static final java.util.Collection flatMapIndexedSequenceTo(kotlin.sequences.Sequence,java.util.Collection,kotlin.jvm.functions.Function2)
+    public static final kotlin.sequences.Sequence flatMapIterable(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final java.util.Collection flatMapIterableTo(kotlin.sequences.Sequence,java.util.Collection,kotlin.jvm.functions.Function1)
+    public static final java.util.Collection flatMapTo(kotlin.sequences.Sequence,java.util.Collection,kotlin.jvm.functions.Function1)
+    public static final java.lang.Object fold(kotlin.sequences.Sequence,java.lang.Object,kotlin.jvm.functions.Function2)
+    public static final java.lang.Object foldIndexed(kotlin.sequences.Sequence,java.lang.Object,kotlin.jvm.functions.Function3)
+    public static final void forEach(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final void forEachIndexed(kotlin.sequences.Sequence,kotlin.jvm.functions.Function2)
+    public static final java.util.Map groupBy(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final java.util.Map groupBy(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1,kotlin.jvm.functions.Function1)
+    public static final java.util.Map groupByTo(kotlin.sequences.Sequence,java.util.Map,kotlin.jvm.functions.Function1)
+    public static final java.util.Map groupByTo(kotlin.sequences.Sequence,java.util.Map,kotlin.jvm.functions.Function1,kotlin.jvm.functions.Function1)
+    public static final kotlin.collections.Grouping groupingBy(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final int indexOf(kotlin.sequences.Sequence,java.lang.Object)
+    public static final int indexOfFirst(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final int indexOfLast(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final java.lang.Appendable joinTo(kotlin.sequences.Sequence,java.lang.Appendable,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,int,java.lang.CharSequence,kotlin.jvm.functions.Function1)
+    public static synthetic java.lang.Appendable joinTo$default(kotlin.sequences.Sequence,java.lang.Appendable,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,int,java.lang.CharSequence,kotlin.jvm.functions.Function1,int,java.lang.Object)
+    public static final java.lang.String joinToString(kotlin.sequences.Sequence,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,int,java.lang.CharSequence,kotlin.jvm.functions.Function1)
+    public static synthetic java.lang.String joinToString$default(kotlin.sequences.Sequence,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,int,java.lang.CharSequence,kotlin.jvm.functions.Function1,int,java.lang.Object)
+    public static final java.lang.Object last(kotlin.sequences.Sequence)
+    public static final java.lang.Object last(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final int lastIndexOf(kotlin.sequences.Sequence,java.lang.Object)
+    public static final java.lang.Object lastOrNull(kotlin.sequences.Sequence)
+    public static final java.lang.Object lastOrNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence map(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence mapIndexed(kotlin.sequences.Sequence,kotlin.jvm.functions.Function2)
+    public static final kotlin.sequences.Sequence mapIndexedNotNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function2)
+    public static final java.util.Collection mapIndexedNotNullTo(kotlin.sequences.Sequence,java.util.Collection,kotlin.jvm.functions.Function2)
+    public static final java.util.Collection mapIndexedTo(kotlin.sequences.Sequence,java.util.Collection,kotlin.jvm.functions.Function2)
+    public static final kotlin.sequences.Sequence mapNotNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final java.util.Collection mapNotNullTo(kotlin.sequences.Sequence,java.util.Collection,kotlin.jvm.functions.Function1)
+    public static final java.util.Collection mapTo(kotlin.sequences.Sequence,java.util.Collection,kotlin.jvm.functions.Function1)
+    public static final java.lang.Object maxByOrNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final java.lang.Object maxByOrThrow(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final double maxOf(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final float maxOf(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final java.lang.Comparable maxOf(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final java.lang.Comparable maxOfOrNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final java.lang.Double maxOfOrNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final java.lang.Float maxOfOrNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final java.lang.Object maxOfWith(kotlin.sequences.Sequence,java.util.Comparator,kotlin.jvm.functions.Function1)
+    private static final java.lang.Object maxOfWithOrNull(kotlin.sequences.Sequence,java.util.Comparator,kotlin.jvm.functions.Function1)
+    public static final java.lang.Comparable maxOrNull(kotlin.sequences.Sequence)
+    public static final java.lang.Double maxOrNull(kotlin.sequences.Sequence)
+    public static final java.lang.Float maxOrNull(kotlin.sequences.Sequence)
+    public static final double maxOrThrow(kotlin.sequences.Sequence)
+    public static final float maxOrThrow(kotlin.sequences.Sequence)
+    public static final java.lang.Comparable maxOrThrow(kotlin.sequences.Sequence)
+    public static final java.lang.Object maxWithOrNull(kotlin.sequences.Sequence,java.util.Comparator)
+    public static final java.lang.Object maxWithOrThrow(kotlin.sequences.Sequence,java.util.Comparator)
+    public static final java.lang.Object minByOrNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final java.lang.Object minByOrThrow(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final double minOf(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final float minOf(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final java.lang.Comparable minOf(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final java.lang.Comparable minOfOrNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final java.lang.Double minOfOrNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final java.lang.Float minOfOrNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final java.lang.Object minOfWith(kotlin.sequences.Sequence,java.util.Comparator,kotlin.jvm.functions.Function1)
+    private static final java.lang.Object minOfWithOrNull(kotlin.sequences.Sequence,java.util.Comparator,kotlin.jvm.functions.Function1)
+    public static final java.lang.Comparable minOrNull(kotlin.sequences.Sequence)
+    public static final java.lang.Double minOrNull(kotlin.sequences.Sequence)
+    public static final java.lang.Float minOrNull(kotlin.sequences.Sequence)
+    public static final double minOrThrow(kotlin.sequences.Sequence)
+    public static final float minOrThrow(kotlin.sequences.Sequence)
+    public static final java.lang.Comparable minOrThrow(kotlin.sequences.Sequence)
+    public static final java.lang.Object minWithOrNull(kotlin.sequences.Sequence,java.util.Comparator)
+    public static final java.lang.Object minWithOrThrow(kotlin.sequences.Sequence,java.util.Comparator)
+    public static final kotlin.sequences.Sequence minus(kotlin.sequences.Sequence,java.lang.Iterable)
+    public static final kotlin.sequences.Sequence minus(kotlin.sequences.Sequence,java.lang.Object)
+    public static final kotlin.sequences.Sequence minus(kotlin.sequences.Sequence,kotlin.sequences.Sequence)
+    public static final kotlin.sequences.Sequence minus(kotlin.sequences.Sequence,java.lang.Object[])
+    private static final kotlin.sequences.Sequence minusElement(kotlin.sequences.Sequence,java.lang.Object)
+    public static final boolean none(kotlin.sequences.Sequence)
+    public static final boolean none(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence onEach(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence onEachIndexed(kotlin.sequences.Sequence,kotlin.jvm.functions.Function2)
+    public static final kotlin.Pair partition(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence plus(kotlin.sequences.Sequence,java.lang.Iterable)
+    public static final kotlin.sequences.Sequence plus(kotlin.sequences.Sequence,java.lang.Object)
+    public static final kotlin.sequences.Sequence plus(kotlin.sequences.Sequence,kotlin.sequences.Sequence)
+    public static final kotlin.sequences.Sequence plus(kotlin.sequences.Sequence,java.lang.Object[])
+    private static final kotlin.sequences.Sequence plusElement(kotlin.sequences.Sequence,java.lang.Object)
+    public static final java.lang.Object reduce(kotlin.sequences.Sequence,kotlin.jvm.functions.Function2)
+    public static final java.lang.Object reduceIndexed(kotlin.sequences.Sequence,kotlin.jvm.functions.Function3)
+    public static final java.lang.Object reduceIndexedOrNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function3)
+    public static final java.lang.Object reduceOrNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function2)
+    public static final kotlin.sequences.Sequence requireNoNulls(kotlin.sequences.Sequence)
+    public static final kotlin.sequences.Sequence runningFold(kotlin.sequences.Sequence,java.lang.Object,kotlin.jvm.functions.Function2)
+    public static final kotlin.sequences.Sequence runningFoldIndexed(kotlin.sequences.Sequence,java.lang.Object,kotlin.jvm.functions.Function3)
+    public static final kotlin.sequences.Sequence runningReduce(kotlin.sequences.Sequence,kotlin.jvm.functions.Function2)
+    public static final kotlin.sequences.Sequence runningReduceIndexed(kotlin.sequences.Sequence,kotlin.jvm.functions.Function3)
+    public static final kotlin.sequences.Sequence scan(kotlin.sequences.Sequence,java.lang.Object,kotlin.jvm.functions.Function2)
+    public static final kotlin.sequences.Sequence scanIndexed(kotlin.sequences.Sequence,java.lang.Object,kotlin.jvm.functions.Function3)
+    public static final java.lang.Object single(kotlin.sequences.Sequence)
+    public static final java.lang.Object single(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final java.lang.Object singleOrNull(kotlin.sequences.Sequence)
+    public static final java.lang.Object singleOrNull(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence sorted(kotlin.sequences.Sequence)
+    public static final kotlin.sequences.Sequence sortedBy(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence sortedByDescending(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence sortedDescending(kotlin.sequences.Sequence)
+    public static final kotlin.sequences.Sequence sortedWith(kotlin.sequences.Sequence,java.util.Comparator)
+    public static final int sumBy(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final double sumByDouble(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final int sumOfByte(kotlin.sequences.Sequence)
+    public static final double sumOfDouble(kotlin.sequences.Sequence)
+    private static final double sumOfDouble(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final float sumOfFloat(kotlin.sequences.Sequence)
+    public static final int sumOfInt(kotlin.sequences.Sequence)
+    private static final int sumOfInt(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final long sumOfLong(kotlin.sequences.Sequence)
+    private static final long sumOfLong(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final int sumOfShort(kotlin.sequences.Sequence)
+    private static final int sumOfUInt(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    private static final long sumOfULong(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final kotlin.sequences.Sequence take(kotlin.sequences.Sequence,int)
+    public static final kotlin.sequences.Sequence takeWhile(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1)
+    public static final java.util.Collection toCollection(kotlin.sequences.Sequence,java.util.Collection)
+    public static final java.util.HashSet toHashSet(kotlin.sequences.Sequence)
+    public static final java.util.List toList(kotlin.sequences.Sequence)
+    public static final java.util.List toMutableList(kotlin.sequences.Sequence)
+    public static final java.util.Set toMutableSet(kotlin.sequences.Sequence)
+    public static final java.util.Set toSet(kotlin.sequences.Sequence)
+    public static final kotlin.sequences.Sequence windowed(kotlin.sequences.Sequence,int,int,boolean)
+    public static final kotlin.sequences.Sequence windowed(kotlin.sequences.Sequence,int,int,boolean,kotlin.jvm.functions.Function1)
+    public static synthetic kotlin.sequences.Sequence windowed$default(kotlin.sequences.Sequence,int,int,boolean,int,java.lang.Object)
+    public static synthetic kotlin.sequences.Sequence windowed$default(kotlin.sequences.Sequence,int,int,boolean,kotlin.jvm.functions.Function1,int,java.lang.Object)
+    public static final kotlin.sequences.Sequence withIndex(kotlin.sequences.Sequence)
+    public static final kotlin.sequences.Sequence zip(kotlin.sequences.Sequence,kotlin.sequences.Sequence)
+    public static final kotlin.sequences.Sequence zip(kotlin.sequences.Sequence,kotlin.sequences.Sequence,kotlin.jvm.functions.Function2)
+    public static final kotlin.sequences.Sequence zipWithNext(kotlin.sequences.Sequence)
+    public static final kotlin.sequences.Sequence zipWithNext(kotlin.sequences.Sequence,kotlin.jvm.functions.Function2)
 kotlin.sequences.SubSequence$iterator$1
 kotlin.sequences.SubSequence
 kotlin.sequences.TakeSequence$iterator$1
@@ -23214,8 +23536,17 @@ kotlin.text.CharsKt__CharKt:
     public static final java.lang.String titlecase(char)
 kotlin.text.Charsets
 kotlin.text.CharsetsKt
-kotlin.text.DelimitedRangesSequence$iterator$1
-kotlin.text.DelimitedRangesSequence
+kotlin.text.DelimitedRangesSequence$iterator$1:
+    public final int getCounter()
+    public final int getCurrentStartIndex()
+    public final kotlin.ranges.IntRange getNextItem()
+    public final int getNextSearchIndex()
+    public final int getNextState()
+    public final void setCounter(int)
+    public final void setCurrentStartIndex(int)
+    public final void setNextItem(kotlin.ranges.IntRange)
+    public final void setNextSearchIndex(int)
+    public final void setNextState(int)
 kotlin.text.FlagEnum
 kotlin.text.HexExtensionsKt
 kotlin.text.HexFormat$Builder
@@ -23464,12 +23795,10 @@ kotlin.text.StringsKt__StringsJVMKt:
     private static final java.lang.String uppercase(java.lang.String,java.util.Locale)
 kotlin.text.StringsKt__StringsKt$iterator$1
 kotlin.text.StringsKt__StringsKt$rangesDelimitedBy$1
-kotlin.text.StringsKt__StringsKt$rangesDelimitedBy$2
 kotlin.text.StringsKt__StringsKt$splitToSequence$1
 kotlin.text.StringsKt__StringsKt$splitToSequence$2
 kotlin.text.StringsKt__StringsKt:
     public void <init>()
-    public static final synthetic kotlin.Pair access$findAnyOf(java.lang.CharSequence,java.util.Collection,int,boolean,boolean)
     public static final java.lang.String commonPrefixWith(java.lang.CharSequence,java.lang.CharSequence,boolean)
     public static synthetic java.lang.String commonPrefixWith$default(java.lang.CharSequence,java.lang.CharSequence,boolean,int,java.lang.Object)
     public static final java.lang.String commonSuffixWith(java.lang.CharSequence,java.lang.CharSequence,boolean)
@@ -23486,7 +23815,6 @@ kotlin.text.StringsKt__StringsKt:
     public static synthetic boolean endsWith$default(java.lang.CharSequence,char,boolean,int,java.lang.Object)
     public static synthetic boolean endsWith$default(java.lang.CharSequence,java.lang.CharSequence,boolean,int,java.lang.Object)
     public static final kotlin.Pair findAnyOf(java.lang.CharSequence,java.util.Collection,int,boolean)
-    private static final kotlin.Pair findAnyOf$StringsKt__StringsKt(java.lang.CharSequence,java.util.Collection,int,boolean,boolean)
     public static synthetic kotlin.Pair findAnyOf$default(java.lang.CharSequence,java.util.Collection,int,boolean,int,java.lang.Object)
     public static final kotlin.Pair findLastAnyOf(java.lang.CharSequence,java.util.Collection,int,boolean)
     public static synthetic kotlin.Pair findLastAnyOf$default(java.lang.CharSequence,java.util.Collection,int,boolean,int,java.lang.Object)
@@ -23496,7 +23824,6 @@ kotlin.text.StringsKt__StringsKt:
     private static final java.lang.Object ifEmpty(java.lang.CharSequence,kotlin.jvm.functions.Function0)
     public static final int indexOf(java.lang.CharSequence,char,int,boolean)
     public static synthetic int indexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object)
-    public static synthetic int indexOf$default(java.lang.CharSequence,java.lang.String,int,boolean,int,java.lang.Object)
     public static final int indexOfAny(java.lang.CharSequence,java.util.Collection,int,boolean)
     public static final int indexOfAny(java.lang.CharSequence,char[],int,boolean)
     public static synthetic int indexOfAny$default(java.lang.CharSequence,java.util.Collection,int,boolean,int,java.lang.Object)
@@ -23507,8 +23834,6 @@ kotlin.text.StringsKt__StringsKt:
     private static final boolean isNullOrBlank(java.lang.CharSequence)
     private static final boolean isNullOrEmpty(java.lang.CharSequence)
     public static final kotlin.collections.CharIterator iterator(java.lang.CharSequence)
-    public static final int lastIndexOf(java.lang.CharSequence,java.lang.String,int,boolean)
-    public static synthetic int lastIndexOf$default(java.lang.CharSequence,java.lang.String,int,boolean,int,java.lang.Object)
     public static final int lastIndexOfAny(java.lang.CharSequence,java.util.Collection,int,boolean)
     public static synthetic int lastIndexOfAny$default(java.lang.CharSequence,java.util.Collection,int,boolean,int,java.lang.Object)
     public static synthetic int lastIndexOfAny$default(java.lang.CharSequence,char[],int,boolean,int,java.lang.Object)
@@ -23525,9 +23850,7 @@ kotlin.text.StringsKt__StringsKt:
     public static synthetic java.lang.CharSequence padStart$default(java.lang.CharSequence,int,char,int,java.lang.Object)
     public static synthetic java.lang.String padStart$default(java.lang.String,int,char,int,java.lang.Object)
     private static final kotlin.sequences.Sequence rangesDelimitedBy$StringsKt__StringsKt(java.lang.CharSequence,char[],int,boolean,int)
-    private static final kotlin.sequences.Sequence rangesDelimitedBy$StringsKt__StringsKt(java.lang.CharSequence,java.lang.String[],int,boolean,int)
     static synthetic kotlin.sequences.Sequence rangesDelimitedBy$StringsKt__StringsKt$default(java.lang.CharSequence,char[],int,boolean,int,int,java.lang.Object)
-    static synthetic kotlin.sequences.Sequence rangesDelimitedBy$StringsKt__StringsKt$default(java.lang.CharSequence,java.lang.String[],int,boolean,int,int,java.lang.Object)
     public static final java.lang.CharSequence removePrefix(java.lang.CharSequence,java.lang.CharSequence)
     public static final java.lang.String removePrefix(java.lang.String,java.lang.CharSequence)
     public static final java.lang.CharSequence removeRange(java.lang.CharSequence,int,int)
@@ -23565,14 +23888,10 @@ kotlin.text.StringsKt__StringsKt:
     public static final java.lang.CharSequence replaceRange(java.lang.CharSequence,kotlin.ranges.IntRange,java.lang.CharSequence)
     private static final java.lang.String replaceRange(java.lang.String,int,int,java.lang.CharSequence)
     private static final java.lang.String replaceRange(java.lang.String,kotlin.ranges.IntRange,java.lang.CharSequence)
-    public static final void requireNonNegativeLimit(int)
     private static final java.util.List split(java.lang.CharSequence,kotlin.text.Regex,int)
     public static final java.util.List split(java.lang.CharSequence,char[],boolean,int)
-    public static final java.util.List split(java.lang.CharSequence,java.lang.String[],boolean,int)
-    private static final java.util.List split$StringsKt__StringsKt(java.lang.CharSequence,java.lang.String,boolean,int)
     static synthetic java.util.List split$default(java.lang.CharSequence,kotlin.text.Regex,int,int,java.lang.Object)
     public static synthetic java.util.List split$default(java.lang.CharSequence,char[],boolean,int,int,java.lang.Object)
-    public static synthetic java.util.List split$default(java.lang.CharSequence,java.lang.String[],boolean,int,int,java.lang.Object)
     private static final kotlin.sequences.Sequence splitToSequence(java.lang.CharSequence,kotlin.text.Regex,int)
     public static final kotlin.sequences.Sequence splitToSequence(java.lang.CharSequence,char[],boolean,int)
     public static final kotlin.sequences.Sequence splitToSequence(java.lang.CharSequence,java.lang.String[],boolean,int)
@@ -23588,7 +23907,6 @@ kotlin.text.StringsKt__StringsKt:
     public static final java.lang.CharSequence subSequence(java.lang.CharSequence,kotlin.ranges.IntRange)
     private static final java.lang.CharSequence subSequence(java.lang.String,int,int)
     private static final java.lang.String substring(java.lang.CharSequence,int,int)
-    public static final java.lang.String substring(java.lang.CharSequence,kotlin.ranges.IntRange)
     public static final java.lang.String substring(java.lang.String,kotlin.ranges.IntRange)
     static synthetic java.lang.String substring$default(java.lang.CharSequence,int,int,int,java.lang.Object)
     public static final java.lang.String substringAfter(java.lang.String,char,java.lang.String)
@@ -24961,7 +25279,7 @@ androidx.activity.result.ActivityResultRegistry$1:
     public final synthetic androidx.activity.result.ActivityResultCallback val$callback
     public final synthetic androidx.activity.result.contract.ActivityResultContract val$contract
     public final synthetic java.lang.String val$key
-androidx.activity.result.ActivityResultRegistry$3$$InternalSyntheticThrowCCEIfNotNull$20$2025804ee48157b73e7ba6ee24ee7819a25f8590dbb68233572fab25cfbc15f1$0
+androidx.activity.result.ActivityResultRegistry$3$$InternalSyntheticThrowCCEIfNotNull$71$2025804ee48157b73e7ba6ee24ee7819a25f8590dbb68233572fab25cfbc15f1$0
 androidx.activity.result.ActivityResultRegistry$3:
     public static boolean addToGoal()
     public static void doAfterTextChanged()
@@ -25294,6 +25612,7 @@ androidx.appcompat.app.AlertController$AlertParams:
     public int mIconId
     public java.lang.String mIsCheckedColumn
     public boolean mIsMultiChoice
+    public java.lang.CharSequence[] mItems
     public java.lang.String mLabelColumn
     public android.graphics.drawable.Drawable mNegativeButtonIcon
     public android.graphics.drawable.Drawable mNeutralButtonIcon
@@ -25353,13 +25672,13 @@ androidx.appcompat.app.AlertDialog$Builder:
     public static androidx.appcompat.app.AlertDialog$Builder setAdapter()
     public static androidx.appcompat.app.AlertDialog$Builder setCustomTitle()
     public static androidx.appcompat.app.AlertDialog$Builder setIcon()
-    public static androidx.appcompat.app.AlertDialog$Builder setItems()
-    public final void setMessage(java.lang.String)
+    public static androidx.appcompat.app.AlertDialog$Builder setMessage()
     public final void setNegativeButton(java.lang.String)
     public static androidx.appcompat.app.AlertDialog$Builder setOnKeyListener()
     public final void setPositiveButton(java.lang.String,android.content.DialogInterface$OnClickListener)
     public static androidx.appcompat.app.AlertDialog$Builder setSingleChoiceItems()
-    public final void setView(android.view.View)
+    public final void setTitle(java.lang.CharSequence)
+    public static androidx.appcompat.app.AlertDialog$Builder setView()
 androidx.appcompat.app.AlertDialog:
     public final android.widget.Button getButton(int)
     public static androidx.appcompat.app.AppCompatDelegate getDelegate$androidx$appcompat$app$AppCompatDialog()
@@ -25381,9 +25700,7 @@ androidx.appcompat.app.AppCompatActivity:
     public abstract void onNightModeChanged()
     public abstract void onPrepareSupportNavigateUpTaskStack()
     public abstract void onSupportContentChanged()
-    public abstract boolean onSupportNavigateUp()
     public abstract boolean performMenuItemShortcut()
-    public abstract void setSupportActionBar()
     public abstract void supportInvalidateOptionsMenu()
     public abstract void supportNavigateUpTo()
     public abstract boolean supportShouldUpRecreateTask()
@@ -25544,7 +25861,6 @@ androidx.appcompat.app.AppCompatViewInflater:
 androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor:
     public static synthetic void lambda$execute$0()
 androidx.appcompat.app.AppLocalesStorageHelper
-androidx.appcompat.app.LayoutIncludeDetector$$InternalSyntheticThrowCCEIfNotNull$130$6a60655590ef65d84a2da838c467ba5f76e510e853d56a4244bfdd8f00a79a92$0
 androidx.appcompat.app.LayoutIncludeDetector:
     public final void add()
     public final void add$1()
@@ -25623,7 +25939,6 @@ androidx.appcompat.app.ToolbarActionBar$ToolbarMenuCallback
 androidx.appcompat.app.ToolbarActionBar:
     public final androidx.appcompat.app.ToolbarActionBar$2 mMenuClicker
     public static void populateOptionsMenu()
-    public final void setDisplayOptions(int,int)
 androidx.appcompat.app.TwilightManager
 androidx.appcompat.app.WindowDecorActionBar$2
 androidx.appcompat.app.WindowDecorActionBar$3
@@ -25648,8 +25963,6 @@ androidx.appcompat.app.WindowDecorActionBar:
     public final void onContentScrollStarted()
     public final void onContentScrollStopped()
     public final void onWindowVisibilityChanged()
-    public static void setDisplayHomeAsUpEnabled()
-    public final void setDisplayOptions(int,int)
     public static void setElevation()
     public static void setHideOnContentScrollEnabled()
     public static void setHomeButtonEnabled()
@@ -26291,6 +26604,7 @@ androidx.appcompat.widget.DecorToolbar:
     public abstract void initProgress()
     public abstract boolean isOverflowMenuShowPending()
     public abstract boolean isOverflowMenuShowing()
+    public abstract void setBackgroundDrawable()
     public abstract void setCollapsible()
     public abstract void setDisplayOptions(int)
     public abstract void setEmbeddedTabView()
@@ -26301,6 +26615,7 @@ androidx.appcompat.widget.DecorToolbar:
     public abstract void setMenu()
     public abstract void setMenuCallbacks()
     public abstract void setMenuPrepared()
+    public abstract void setTitle(java.lang.CharSequence)
     public abstract void setVisibility(int)
     public abstract void setWindowCallback()
     public abstract void setWindowTitle(java.lang.CharSequence)
@@ -26684,6 +26999,7 @@ androidx.appcompat.widget.ToolbarWidgetWrapper:
     public final void initProgress()
     public final boolean isOverflowMenuShowPending()
     public final boolean isOverflowMenuShowing()
+    public final void setBackgroundDrawable()
     public final void setCollapsible()
     public static void setCustomView()
     public static void setDefaultNavigationContentDescription()
@@ -26700,7 +27016,7 @@ androidx.appcompat.widget.ToolbarWidgetWrapper:
     public static void setNavigationContentDescription$1()
     public static void setNavigationIcon()
     public static void setSubtitle()
-    public static void setTitle()
+    public final void setTitle(java.lang.CharSequence)
     public final void setTitleInt(java.lang.CharSequence)
     public final void setVisibility(int)
     public final void setWindowCallback()
@@ -28204,7 +28520,7 @@ androidx.core.os.LocaleListCompat:
     public final int size()
     public final java.lang.String toLanguageTags()
     public static androidx.core.os.LocaleListCompat wrap(android.os.LocaleList)
-androidx.core.os.LocaleListCompatWrapper$$InternalSyntheticThrowCCEIfNotNull$184$dd0d3399d7d164768be69e26cdc88e49809bc46afb623c060d951b7b929d77ad$0
+androidx.core.os.LocaleListCompatWrapper$$InternalSyntheticThrowCCEIfNotNull$150$dd0d3399d7d164768be69e26cdc88e49809bc46afb623c060d951b7b929d77ad$0
 androidx.core.os.LocaleListCompatWrapper
 androidx.core.os.LocaleListInterface:
     public abstract java.util.Locale get()
@@ -29933,7 +30249,6 @@ androidx.recyclerview.widget.AdapterHelper$UpdateOp:
     public static java.lang.String cmdToString()
 androidx.recyclerview.widget.AdapterHelper:
     public final boolean mDisableRecycler
-    public int mExistingUpdateTypes
     public java.lang.Runnable mOnItemProcessedCallback
     public static void applyAdd()
     public static void applyMove()
@@ -29943,6 +30258,7 @@ androidx.recyclerview.widget.AdapterHelper:
     public static int findPositionOffset()
     public final boolean hasAnyUpdateTypes(int)
     public static boolean hasUpdates()
+    public static boolean onItemRangeRemoved()
     public final void reset()
 androidx.recyclerview.widget.ChildHelper$Callback
 androidx.recyclerview.widget.ChildHelper:
@@ -30178,8 +30494,6 @@ androidx.recyclerview.widget.PagerSnapHelper:
     public static void snapToTargetExistingView$androidx$recyclerview$widget$SnapHelper()
 androidx.recyclerview.widget.RecyclerView$$InternalSyntheticThrowCCEIfNotNull$9$517a37322ee80588dec729996c6c417ca95eab0d51be60b205637ba7c0b4f167$0
 androidx.recyclerview.widget.RecyclerView$$InternalSyntheticThrowCCEIfNotNull$9$f90d61cddc94d24e774f020fd9e0d9d51e5128242b2809798fc3ce11d943f782$0
-androidx.recyclerview.widget.RecyclerView$1:
-    public final synthetic int $r8$classId
 androidx.recyclerview.widget.RecyclerView$2
 androidx.recyclerview.widget.RecyclerView$3
 androidx.recyclerview.widget.RecyclerView$4:
@@ -30209,6 +30523,7 @@ androidx.recyclerview.widget.RecyclerView$Adapter:
     public abstract boolean hasObservers()
     public abstract boolean hasStableIds()
     public abstract void notifyDataSetChanged()
+    public abstract void notifyItemRemoved()
     public abstract void onAttachedToRecyclerView()
     public abstract void onBindViewHolder()
     public abstract void onDetachedFromRecyclerView()
@@ -30393,8 +30708,9 @@ androidx.recyclerview.widget.RecyclerView$Recycler:
 androidx.recyclerview.widget.RecyclerView$RecyclerListener:
     public abstract void onViewRecycled()
 androidx.recyclerview.widget.RecyclerView$RecyclerViewDataObserver:
-    public final synthetic androidx.recyclerview.widget.RecyclerView this$0
     public static void onChanged()
+    public static void onItemRangeRemoved()
+    public static void triggerUpdateProcessor()
 androidx.recyclerview.widget.RecyclerView$SavedState$1
 androidx.recyclerview.widget.RecyclerView$SavedState:
     public static void copyFrom()
@@ -30449,12 +30765,10 @@ androidx.recyclerview.widget.RecyclerView:
     public static final boolean FORCE_INVALIDATE_DISPLAY_LIST
     public static final boolean IGNORE_DETACHED_FOCUSED_CHILD
     public static final boolean POST_UPDATES_ON_ANIMATION
-    public boolean mAdapterUpdateDuringMeasure
     public androidx.recyclerview.widget.RecyclerView$ChildDrawingOrderCallback mChildDrawingOrderCallback
     public boolean mEnableFastScroller
     public java.util.List mOnChildAttachStateListeners
     public androidx.recyclerview.widget.RecyclerView$RecyclerListener mRecyclerListener
-    public final java.lang.Runnable mUpdateChildViewsRunnable
     public static void absorbGlows()
     public static void addItemDecoration()
     public static void addOnItemTouchListener()
@@ -30826,6 +31140,7 @@ androidx.transition.ViewUtilsBase:
     public void clearNonTransitionAlpha()
     public static void fetchSetFrame()
     public static kotlin.ranges.IntProgression fromClosedRange()
+    public static kotlin.ranges.IntRange getEMPTY()
     public float getTransitionAlpha(android.view.View)
     public static int newCapacity$kotlin_stdlib()
     public void saveNonTransitionAlpha()
@@ -30836,7 +31151,7 @@ androidx.transition.ViewUtilsBase:
 androidx.transition.Visibility$DisappearListener:
     public final void hideViewWhenNotCanceled()
 androidx.transition.Visibility
-androidx.transition.WindowIdApi14$$InternalSyntheticThrowCCEIfNotNull$184$346ba31081d848221d10738ffacfe8b42a1cf2bcc44a47580e10fd7ecc1dfab1$0
+androidx.transition.WindowIdApi14$$InternalSyntheticThrowCCEIfNotNull$150$346ba31081d848221d10738ffacfe8b42a1cf2bcc44a47580e10fd7ecc1dfab1$0
 androidx.transition.WindowIdApi14
 androidx.vectordrawable.graphics.drawable.AndroidResources:
     public static final int[] STYLEABLE_ANIMATOR
@@ -30965,21 +31280,46 @@ androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$3:
 androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer
 androidx.viewpager2.adapter.FragmentStateAdapter
 androidx.viewpager2.adapter.FragmentViewHolder
-com.example.tapcounter.MainActivity$$InternalSyntheticLambda$1$e99d90dafe594c0046b05a4044139c39a3475e3592e4013a913c596ff801902d$0
+com.example.tapcounter.CounterSettingsActivity:
+    public static void setupSpinners()
+com.example.tapcounter.MainActivity$$InternalSyntheticLambda$2$54c92f05607bc2da27f2c390da65e084195d158c97f7753aa5e8698ee237192e$0
 com.example.tapcounter.MainActivity$Companion
 com.example.tapcounter.MainActivity:
     public static final androidx.transition.ViewUtilsBase Companion
     static void <clinit>()
+    public static void applySettings()
+    public static void decrementCounter()
+    public static void incrementCounter()
     public static void performVibration()
-    public static void showAboutDialog()
-    public static void showCounterSettingsDialog()
+    public static void saveCounter()
+    public static void showDialog()
     public static void showResetConfirmationDialog()
-    public static void showSettingsDialog()
-    public static void showVibrationSettingsDialog()
-    public static void updateDialogTheme()
+    public static void showSaveDialog()
 com.example.tapcounter.R$id
 com.example.tapcounter.R$layout
 com.example.tapcounter.R$menu
+com.example.tapcounter.SavedCounter:
+    public static java.lang.String getId()
+    public static long getTimestamp()
+    public static int getValue()
+com.example.tapcounter.SavedCountersActivity$onCreate$$inlined$sortByDescending$1
+com.example.tapcounter.SavedCountersActivity$onCreate$3:
+    public static void invoke$1()
+com.example.tapcounter.SavedCountersAdapter$ViewHolder:
+    public static android.widget.Button getBtnDelete()
+    public static android.widget.TextView getTextDate()
+    public static android.widget.TextView getTextValue()
+com.example.tapcounter.SavedCountersAdapter:
+    public static void onBindViewHolder$1()
+    public static com.example.tapcounter.SavedCountersAdapter$ViewHolder onCreateViewHolder()
+    public static void removeCounter()
+com.example.tapcounter.SettingsActivity$$InternalSyntheticLambda$1$2cfaac8e52c681c73af7ac3ae8f9b3a96cc8078e8c6841e65ccb1b475f34a6ea$1
+com.example.tapcounter.SettingsActivity$$InternalSyntheticLambda$1$2cfaac8e52c681c73af7ac3ae8f9b3a96cc8078e8c6841e65ccb1b475f34a6ea$2
+com.example.tapcounter.SettingsActivity$$InternalSyntheticLambda$1$2cfaac8e52c681c73af7ac3ae8f9b3a96cc8078e8c6841e65ccb1b475f34a6ea$3
+com.example.tapcounter.SettingsActivity:
+    public static void setupButtons()
+com.example.tapcounter.VibrationSettingsActivity:
+    public static void setupViews()
 com.google.android.material.R$animator
 com.google.android.material.R$attr
 com.google.android.material.R$color
@@ -31870,6 +32210,7 @@ com.google.android.material.checkbox.MaterialCheckBox:
     public static void setUpDefaultButtonDrawableAnimationIfNeeded()
     public static void updateButtonTints()
     public static void updateIconTintIfNeeded()
+com.google.android.material.chip.Chip$$InternalSyntheticLambda$1$860a95f2ba16f11470ac682f45bacaa4f73f666c1689a0905cdb57dc12e2eff5$0
 com.google.android.material.chip.Chip$$InternalSyntheticThrowCCEIfNotNull$20$21dc2a30aa1a8c337670f7455e50b634ee41d346d363c6535e95752b1eac9814$0
 com.google.android.material.chip.Chip$$InternalSyntheticThrowCCEIfNotNull$20$771e1ce41bd975a24499ca8fc137c52bbdd3189676e134624a793565fe35b70a$0
 com.google.android.material.chip.Chip$ChipTouchHelper:
@@ -32162,7 +32503,7 @@ com.google.android.material.datepicker.MonthsPagerAdapter:
     public final com.google.android.material.datepicker.Month getPageMonth(int)
     public static java.lang.CharSequence getPageTitle()
     public final int getPosition(com.google.android.material.datepicker.Month)
-    public static void onBindViewHolder$1()
+    public static void onBindViewHolder$2()
     public static com.google.android.material.datepicker.MonthsPagerAdapter$ViewHolder onCreateViewHolder()
 com.google.android.material.datepicker.OnSelectionChangedListener
 com.google.android.material.datepicker.PickerFragment:
@@ -32186,7 +32527,7 @@ com.google.android.material.datepicker.YearGridAdapter:
     public static android.view.View$OnClickListener createYearClickListener()
     public final int getPositionForYear(int)
     public static int getYearForPosition()
-    public static void onBindViewHolder$2()
+    public static void onBindViewHolder$3()
     public static com.google.android.material.datepicker.YearGridAdapter$ViewHolder onCreateViewHolder()
 com.google.android.material.drawable.DrawableUtils
 com.google.android.material.drawable.ScaledDrawableWrapper
@@ -33130,19 +33471,21 @@ kotlin.collections.ArraysKt__ArraysJVMKt
 kotlin.collections.ArraysKt__ArraysKt
 kotlin.collections.ArraysKt___ArraysJvmKt
 kotlin.collections.ArraysKt___ArraysKt:
+    public static java.util.List asList(java.lang.Object[])
     public static final void fill(java.lang.Object[],int,int)
     public static final int getLastIndex(java.lang.Object[])
 kotlin.collections.ArraysUtilJVM:
     public static final int differenceModulo(int,int,int)
+    public static kotlin.ranges.IntProgression downTo(int,int)
     public static java.util.List emptyList()
     public static final boolean equals(char,char,boolean)
     public static final int getLastIndex(java.util.List)
+    public static java.util.List listOf(java.lang.Object)
     public static final int mod(int,int)
 kotlin.collections.CollectionsKt
 kotlin.collections.CollectionsKt__CollectionsJVMKt
 kotlin.collections.CollectionsKt__CollectionsKt
 kotlin.collections.CollectionsKt__IterablesKt
-kotlin.collections.CollectionsKt__IteratorsJVMKt
 kotlin.collections.CollectionsKt__IteratorsKt
 kotlin.collections.CollectionsKt__MutableCollectionsJVMKt
 kotlin.collections.CollectionsKt__MutableCollectionsKt
@@ -33177,6 +33520,10 @@ kotlin.collections.MapsKt__MapsKt
 kotlin.collections.MapsKt___MapsJvmKt:
     public static java.util.Map emptyMap()
 kotlin.collections.MapsKt___MapsKt
+kotlin.comparisons.ComparisonsKt
+kotlin.comparisons.ComparisonsKt__ComparisonsKt
+kotlin.comparisons.ComparisonsKt___ComparisonsJvmKt
+kotlin.comparisons.ComparisonsKt___ComparisonsKt
 kotlin.coroutines.CoroutineContext$Element
 kotlin.coroutines.CoroutineContext$Key
 kotlin.coroutines.CoroutineContext
@@ -33188,6 +33535,7 @@ kotlin.internal.jdk8.JDK8PlatformImplementations$ReflectSdkVersion:
     public static final kotlin.internal.jdk8.JDK8PlatformImplementations$ReflectSdkVersion INSTANCE
 kotlin.internal.jdk8.JDK8PlatformImplementations
 kotlin.jvm.JvmClassMappingKt
+kotlin.jvm.functions.Function2
 kotlin.jvm.internal.CallableReference$NoReceiver
 kotlin.jvm.internal.CallableReference
 kotlin.jvm.internal.ClassReference$Companion
@@ -33251,15 +33599,28 @@ kotlin.ranges.IntProgressionIterator:
 kotlin.ranges.IntRange$Companion
 kotlin.ranges.IntRange:
     public static final androidx.transition.ViewUtilsBase Companion
-    public static final kotlin.ranges.IntRange EMPTY
+    public static java.lang.Integer getEndInclusive()
+    public static java.lang.Integer getStart()
 kotlin.ranges.RangesKt
 kotlin.ranges.RangesKt__RangesKt
 kotlin.ranges.RangesKt___RangesKt
 kotlin.reflect.KCallable
 kotlin.reflect.KDeclarationContainer
+kotlin.sequences.Sequence:
+    public abstract java.util.Iterator iterator()
+kotlin.sequences.SequencesKt
+kotlin.sequences.SequencesKt__SequenceBuilderKt
+kotlin.sequences.SequencesKt__SequencesJVMKt
+kotlin.sequences.SequencesKt__SequencesKt
+kotlin.sequences.SequencesKt___SequencesJvmKt
+kotlin.sequences.SequencesKt___SequencesKt
 kotlin.text.CharsKt
 kotlin.text.CharsKt__CharJVMKt
 kotlin.text.CharsKt__CharKt
+kotlin.text.DelimitedRangesSequence$iterator$1:
+    public static kotlin.ranges.IntRange next()
+kotlin.text.DelimitedRangesSequence:
+    public final java.util.Iterator iterator()
 kotlin.text.StringsKt
 kotlin.text.StringsKt__AppendableKt
 kotlin.text.StringsKt__IndentKt
@@ -33267,8 +33628,14 @@ kotlin.text.StringsKt__RegexExtensionsJVMKt
 kotlin.text.StringsKt__StringBuilderJVMKt
 kotlin.text.StringsKt__StringNumberConversionsJVMKt
 kotlin.text.StringsKt__StringsJVMKt
+kotlin.text.StringsKt__StringsKt$rangesDelimitedBy$2:
+    public static kotlin.Pair invoke()
+    public static java.lang.Object invoke$1()
 kotlin.text.StringsKt__StringsKt:
     public static final int getLastIndex(java.lang.CharSequence)
+    public static final int indexOf$StringsKt__StringsKt(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean,boolean)
+    public static final boolean regionMatches(int,int,java.lang.String,java.lang.String,boolean)
+    public static final void requireNonNegativeLimit(int)
 kotlin.text.StringsKt___StringsJvmKt
 kotlin.text.StringsKt___StringsKt
 kotlinx.coroutines.Job$Key

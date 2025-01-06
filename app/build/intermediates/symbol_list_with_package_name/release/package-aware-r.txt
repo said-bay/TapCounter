@@ -2976,6 +2976,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable delete_button_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3001,6 +3002,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_refresh
 drawable ic_remove
+drawable ic_save
 drawable ic_search_black_24
 drawable ic_settings
 drawable m3_avd_hide_password
@@ -3148,6 +3150,7 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_remove
 id action_reset
+id action_save
 id action_settings
 id action_text
 id actions
@@ -3180,6 +3183,11 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnAbout
+id btnCounterSettings
+id btnDelete
+id btnSaved
+id btnVibrationSettings
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3206,6 +3214,7 @@ id collapseActionView
 id colorBlue
 id colorGray
 id colorGroup
+id colorSpinner
 id colorWhite
 id compress
 id confirm_button
@@ -3263,6 +3272,7 @@ id edit_query
 id edit_text_id
 id elastic
 id embed
+id emptyText
 id enableVibration
 id end
 id endToStart
@@ -3445,6 +3455,7 @@ id position
 id positionBottom
 id positionCenter
 id positionGroup
+id positionSpinner
 id positionTop
 id postLayout
 id pressed
@@ -3453,6 +3464,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerView
 id report_drawn
 id reverseSawtooth
 id right
@@ -3481,6 +3493,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id seekBarVibration
 id select_dialog_listview
 id selected
 id selection_type
@@ -3494,6 +3507,7 @@ id sin
 id sizeLarge
 id sizeMedium
 id sizeSmall
+id sizeSpinner
 id skipCollapsed
 id skipped
 id slide
@@ -3529,6 +3543,7 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id switchVibration
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3545,11 +3560,14 @@ id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id text
 id text2
+id textDate
 id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textValue
+id textVibrationIntensity
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3716,7 +3734,12 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_about
+layout activity_counter_settings
 layout activity_main
+layout activity_saved_counters
+layout activity_settings
+layout activity_vibration_settings
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3735,6 +3758,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_appearance_settings
 layout dialog_counter_settings
+layout dialog_settings
 layout dialog_vibration_settings
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
@@ -3795,11 +3819,15 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout saved_counter_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout spinner_dropdown_item
+layout spinner_item
 layout support_simple_spinner_dropdown_item
 menu main_menu
+mipmap ic_launcher
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description

@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.tapcounter",
+  "applicationId": "com.bayt.sayac",
   "variantName": "release",
   "elements": [
     {

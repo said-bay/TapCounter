@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Switch
+            android:id="@+id/switchVibration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Titreşim"
+            android:textColor="@android:color/white"
+            android:padding="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333"/>
+
+        <Button
+            android:id="@+id/btnCounterSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sayaç Ayarları"
+            android:textColor="@android:color/white"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="16dp"
+            android:gravity="start|center_vertical"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333"/>
+
+        <Button
+            android:id="@+id/btnSaved"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kaydedilen Sayaçlar"
+            android:textColor="@android:color/white"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="16dp"
+            android:gravity="start|center_vertical"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333"/>
+
+        <Button
+            android:id="@+id/btnAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hakkında"
+            android:textColor="@android:color/white"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="16dp"
+            android:gravity="start|center_vertical"/>
+
+    </LinearLayout>
+
+</LinearLayout>
